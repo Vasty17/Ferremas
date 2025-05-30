@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-FerremasApplication<ferremas>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.matiassalinas.ferremas.FerremasApplication",
+            "projectName": "ferremas",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}

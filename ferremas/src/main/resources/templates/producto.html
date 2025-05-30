@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Productos</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body class="container">
+    <br>
+    <h2>Lista de productos</h2><br>
+
+    <!-- Tabla donde se muestran los usuarios -->
+    <table class="table">
+        <thead>
+            <tr>
+                <th>ID producto</th>
+                <th>Nombre del producto</th>
+                <th>Descripcion del producto</th>
+                <th>Precio del producto</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Bucle que recorre la lista "productos" enviada desde el controlador -->
+            <tr th:each="unProducto: ${productos}">
+                <td th:text="${unProducto.id}"></td>
+                <td th:text="${unProducto.Nombre}"></td>
+                <td th:text="${unProducto.Descripcion}"></td>
+                <td th:text="${unProducto.Precio}"></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>
