@@ -1,37 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <title>Login</title> 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">    
-    
+  <head>
+    <title>Login</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;700;900&display=swap">
-    <link rel="stylesheet" href="assets/css/fontawesome.min.css">
-    <link rel="stylesheet" href="assets/css/login.css">
-</head>
-<body>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;700;900&display=swap"
+    />
+    <link rel="stylesheet" href="assets/css/fontawesome.min.css" />
+    <link rel="stylesheet" href="assets/css/login.css" />
+  </head>
+  <body>
     <div class="login-page">
-        <div class="form">
-          <form class="register-form">
-            <input type="text" placeholder="Nombre"/>
-            <input type="password" placeholder="Contraseña"/>
-            <input type="text" placeholder="email"/>
-            <button>create</button>
-            <p class="message">Ya registrado? <a href="#">Iniciar sesion</a></p>
-          </form>
-          <form class="login-form">
-            <input type="text" placeholder="Nombre"/>
-            <input type="password" placeholder="Contraseña"/>
-            <button>login</button>
-            <p class="message">no Registrado? <a href="#">Crear una cuenta</a></p>
-          </form>
-        </div>
+      <div class="form">
+        <form class="register-form">
+          <input type="text" placeholder="Usuario" />
+          <input type="password" placeholder="Contraseña" />
+          <input type="text" placeholder="email" />
+          <button>create</button>
+          <p class="message">Ya registrado? <a href="#">Iniciar sesion</a></p>
+        </form>
+        <form class="login-form">
+          <input type="text" id="username" placeholder="Usuario" />
+          <input type="password" id="password" placeholder="Contraseña" />
+          <button id="btnLogin">Entrar</button>
+          <p id="mensaje"></p>
+          <p class="message">no Registrado? <a href="#">Crear una cuenta</a></p>
+        </form>
       </div>
+    </div>
 
     <script src="assets/js/jquery-1.11.0.min.js"></script>
     <script src="assets/js/jquery-migrate-1.2.1.min.js"></script>
     <script src="assets/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/js/login.js"> </script>
-</body>
+    <script src="assets/js/login.js"></script>
+  </body>
 </html>
