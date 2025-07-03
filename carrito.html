@@ -116,7 +116,7 @@
         <p>Productos (2): <strong id="productTotal">$97.980</strong></p>
         <p><a href="#">Calcular costo de envío</a></p>
         <p class="total">Total: <span id="finalTotal">$97.980</span></p>
-        <button class="btn">Continuar compra</button>
+        <button onclick="pagar()">Continuar Compra</button>
         <p class="shipping-note">
           El envío gratis está sujeto al peso, precio y distancia.
         </p>
@@ -220,5 +220,30 @@
     <script src="assets/js/templatemo.js"></script>
     <script src="assets/js/custom.js"></script>
     <script src="assets/js/carrito.js"></script>
+
+    <script>
+        function pagar() {
+        fetch("/api/pagos/crear", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ amount: 10000 }) 
+        })
+        .then(res => res.json())
+        .then(data => {
+            const form = document.createElement("form");
+            form.method = "POST";
+            form.action = data.url;
+
+            const input = document.createElement("input");
+            input.type = "hidden";
+            input.name = "token_ws";
+            input.value = data.token;
+
+            form.appendChild(input);
+            document.body.appendChild(form);
+            form.submit();
+        });
+        }
+    </script>
   </body>
 </html>
